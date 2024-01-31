@@ -89,6 +89,22 @@ mysql>
 
 #### Ответ на задание 4.
 
+```SQL
+mysql> select first_name, last_name, active, lower(replace(first_name, 'LL', 'PP')), lower(last_name) from customer where first_name like 'Kelly' or first_name like 'Willie' and active=
+1;
++------------+-----------+--------+----------------------------------------+------------------+
+| first_name | last_name | active | lower(replace(first_name, 'LL', 'PP')) | lower(last_name) |
++------------+-----------+--------+----------------------------------------+------------------+
+| KELLY      | TORRES    |      1 | keppy                                  | torres           |
+| WILLIE     | HOWELL    |      1 | wippie                                 | howell           |
+| WILLIE     | MARKHAM   |      1 | wippie                                 | markham          |
+| KELLY      | KNOTT     |      1 | keppy                                  | knott            |
++------------+-----------+--------+----------------------------------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+```
+
 ---
 
 ## Дополнительные задания (со звёздочкой*)
